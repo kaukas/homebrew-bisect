@@ -1,5 +1,3 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class Bisect < Formula
   desc "Find the interesting item in a list of items"
   homepage "https://github.com/kaukas/bisect"
@@ -15,8 +13,7 @@ class Bisect < Formula
   end
 
   test do
-    # output = shell_output("#{bin}/bisect --help")
-    # assert_match "Usage", output
-    false
+    output = shell_output("#{bin}/bisect --help")
+    assert_match "Usage", output
   end
 end
